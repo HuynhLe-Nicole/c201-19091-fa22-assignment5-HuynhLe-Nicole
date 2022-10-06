@@ -1,7 +1,22 @@
 /**
  * Assignment3 Class
  */
+import java.util.Scanner;
 public class CreditCardValidation {
+    /** Main Method */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in); // Create a Scanner
+
+        // Prompt the user to enter a credit card number as a long integer
+        System.out.print("Enter a credit card number as a long integer: ");
+        long number = input.nextLong();
+
+        System.out.println(
+                number + " is " + (isValid(number)) ? "valid" : "invalid");
+    }
+
+
+
 
     /**
      * Description: This method takes validates a credit card number against the Luhn check.
