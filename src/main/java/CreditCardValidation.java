@@ -3,22 +3,8 @@
  */
 import java.util.Scanner;
 public class CreditCardValidation {
-    /** Main Method */
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in); // Create a Scanner
 
-        // Prompt the user to enter a credit card number as a long integer
-        System.out.print("Enter a credit card number as a long integer: ");
-        long number = input.nextLong();
-
-        System.out.println(
-                number + " is " + (isValid(number)) ? "valid" : "invalid");
-    }
-
-
-
-
-    /**
+       /**
      * Description: This method takes validates a credit card number against the Luhn check.
      * @param creditCardNumber A credit card number that should have between 13 and 19 digits.
      * @return A boolean if the credit card number is valid or not.
@@ -35,8 +21,12 @@ public class CreditCardValidation {
         }
 
         // your code for the Luhn Algorithm goes here.
+        boolean valid = ((calculateEvenPositionSum(creditCardNumber) + calculateOddPositionSum(creditCardNumber))% 10 == 0);
+        return valid;
 
-        return false;
+
+
+
     }
 
     /**
@@ -45,7 +35,8 @@ public class CreditCardValidation {
      * @return Size of the Credit Card Number
      */
     public static int getCreditCardSize(long creditCardNumber){
-        return 0;
+        String num = creditCardNumber + "";
+        return num.length();
     }
 
     /**
@@ -54,8 +45,14 @@ public class CreditCardValidation {
      * @param creditCardNumber A credit card number that is within 13 to 19 digits.
      * @return Returns the sum of the doubled even position numbers in the creditCardNumber parameter.
      */
-    public static int calculateEvenPositionSum(long creditCardNumber){
-        return 0;
+    public static int calculateEvenPositionSum(long creditCardNumber) {
+        int sum = 0;
+        String num = creditCardNumber + "";
+        for (int i = getCreditCardSize(creditCardNumber) - 2; i >= 0; i -= 2) {
+            sum += getDigit(Integer.parseInt(num.charAt(i) + "") * 2);
+        }
+        return sum;
+
     }
 
     /**
@@ -64,7 +61,20 @@ public class CreditCardValidation {
      * @return Returns the sum of the odd position numbers in the creditCardNumber parameter.
      */
     public static int calculateOddPositionSum(long creditCardNumber){
-        return 0;
+        int sum = 0;
+        String num = creditCardNumber + "";
+        for (int i = getCreditCardSize(creditCardNumber) - 1; i >= 0; i -= 2) {
+            sum += Integer.parseInt(num.charAt(i) + "");
+        }
+        return sum;
+
+    }
+    //Return this number if it is a single digit, otherwise, return the sum of the two digits
+    public static int getDigit(int number){
+        if (number < 9)
+            return number;
+        else
+            return number / 10 + number % 10;
     }
 
 }

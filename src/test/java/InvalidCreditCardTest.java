@@ -15,7 +15,7 @@ public class InvalidCreditCardTest {
         } catch (Exception e) {
             fail();
         }
-        assertTrue(response);
+        assertFalse(response);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class InvalidCreditCardTest {
         } catch (Exception e) {
             fail();
         }
-        assertTrue(response);
+        assertFalse(response);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class InvalidCreditCardTest {
         } catch (Exception e) {
             fail();
         }
-        assertTrue(response);
+        assertFalse(response);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class InvalidCreditCardTest {
         } catch (Exception e) {
             fail();
         }
-        assertTrue(response);
+        assertFalse(response);
     }
 
     /**

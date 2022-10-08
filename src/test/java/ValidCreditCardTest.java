@@ -43,11 +43,11 @@ public class ValidCreditCardTest {
     }
 
     @Test
-    @DisplayName("Credit card 5388576018107076 is valid")
-    void validateCreditCardNumberAsInvalid5388576018107076() {
+    @DisplayName("Credit card 5588576018107076 is valid")
+    void validateCreditCardNumberAsInvalid5588576018107076() {
         boolean response = false;
         try {
-            response = CreditCardValidation.validateCreditCard(5388576018107076L);
+            response = CreditCardValidation.validateCreditCard(5588576018107076L);
         } catch (Exception e) {
             fail();
         }
