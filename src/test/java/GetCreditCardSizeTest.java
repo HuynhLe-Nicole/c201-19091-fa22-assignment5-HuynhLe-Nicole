@@ -8,7 +8,7 @@ public class GetCreditCardSizeTest {
     @Test
     @DisplayName("Size of credit card number 5388576018107076 is 16")
     void getCreditCard5388576018107076Size() {
-        assertEquals(16, CreditCardValidation.getCreditCardSize(5388576018107076L), 0.01);
+        assertEquals(9, CreditCardValidation.getCreditCardSize(123456789L), 0.01);
     }
 
     /**

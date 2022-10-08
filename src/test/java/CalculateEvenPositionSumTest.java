@@ -8,11 +8,12 @@ public class CalculateEvenPositionSumTest {
     @Test
     @DisplayName("Even sum for credit card number 5388576018107076 is 26")
     void calculateEvenSumForCreditCard5388576018107076() {
-        assertEquals(26, CreditCardValidation.calculateEvenPositionSum(5388576018107076L), 0.01);
+        assertEquals(26, CreditCardValidation.calculateEvenPositionSum( 5388576018107076L), 0.01);
     }
 
     /**
      * Create two additional tests
      */
+
 
 }

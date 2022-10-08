@@ -60,21 +60,23 @@ public class CreditCardValidation {
      * @param creditCardNumber A credit card number that is within 13 to 19 digits.
      * @return Returns the sum of the odd position numbers in the creditCardNumber parameter.
      */
-    public static int calculateOddPositionSum(long creditCardNumber){
+    public static int calculateOddPositionSum(long creditCardNumber) {
         int sum = 0;
         String num = creditCardNumber + "";
         for (int i = getCreditCardSize(creditCardNumber) - 1; i >= 0; i -= 2) {
             sum += Integer.parseInt(num.charAt(i) + "");
         }
         return sum;
+    }
+    //Return this number if it ia a single digit, otherwise, return the sum of the two digit
+    public static int getDigit(int number) {
+         if(number < 9)
+             return number;
+         else
+             return number / 10 + number % 10;
+        }
+
 
     }
-    //Return this number if it is a single digit, otherwise, return the sum of the two digits
-    public static int getDigit(int number){
-        if (number < 9)
-            return number;
-        else
-            return number / 10 + number % 10;
-    }
 
-}
+
