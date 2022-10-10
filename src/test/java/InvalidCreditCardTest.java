@@ -58,4 +58,36 @@ public class InvalidCreditCardTest {
      * Create an additional test
      */
 
+    @Test
+    void validateCreditCardNumberAsInvalid369369369369369() {
+        boolean response = false;
+        try {
+            response = CreditCardValidation.validateCreditCard(369369369369369L);
+        } catch (Exception e) {
+            fail();
+        }
+        assertFalse(response);
+    }
+    @Test
+    void validateCreditCardNumberAsInvalid358358358358358() {
+        boolean response = false;
+        try {
+            response = CreditCardValidation.validateCreditCard(358358358358358L);
+        } catch (Exception e) {
+            fail();
+        }
+        assertFalse(response);
+    }
+
+    @Test
+    void validateCreditCardNumberAsInvalid356893568935689() {
+        boolean response = false;
+        try {
+            response = CreditCardValidation.validateCreditCard(356893568935689L);
+        } catch (Exception e) {
+            fail();
+        }
+        assertFalse(response);
+    }
+
 }

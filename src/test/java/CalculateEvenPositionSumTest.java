@@ -14,6 +14,20 @@ public class CalculateEvenPositionSumTest {
     /**
      * Create two additional tests
      */
+    @Test
+    void calculateEvenSumForCreditCard369369369369369() {
+        assertEquals(39, CreditCardValidation.calculateEvenPositionSum(369369369369369L));
+    }
+    @Test
+    void calculateEvenSumForCreditCard358358358358358() {
+        assertEquals(29, CreditCardValidation.calculateEvenPositionSum(358358358358358L));
+    }
+    @Test
+    void calculateEvenSumForCreditCard356893589358935689() {
+        assertEquals(46, CreditCardValidation.calculateEvenPositionSum(356893589358935689L));
+    }
+
+
 
 
 }

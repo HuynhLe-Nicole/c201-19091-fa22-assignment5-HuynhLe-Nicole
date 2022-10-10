@@ -14,5 +14,18 @@ public class CalculateOddPositionSumTest {
     /**
      * Create two additional tests
      */
+    @Test
+    void calculateOddSumForCreditCard369369369369369() {
+        assertEquals(48, CreditCardValidation.calculateOddPositionSum(369369369369369L));
+    }
+    @Test
+    void calculateOddSumForCreditCard368368368368368() {
+        assertEquals(45, CreditCardValidation.calculateOddPositionSum(368368368368368L));
+    }
+    @Test
+    void calculateOddSumForCreditCard356893568936589() {
+        assertEquals(48, CreditCardValidation.calculateOddPositionSum(356893568936589L));
+    }
 
 }
+
